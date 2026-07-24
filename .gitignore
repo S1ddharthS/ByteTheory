@@ -19,6 +19,8 @@ Thumbs.db
 # Node
 frontend/node_modules/
 
+frontend/.env
+
 # Python cache
 .pytest_cache/
 .mypy_cache/
