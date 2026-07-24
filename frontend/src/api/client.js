@@ -27,8 +27,17 @@ export const getComparison = async () => {
   return response.data;
 };
 
-export const detect = async (formData) => {
-  const response = await apiClient.post('/detect', formData, {
+export const detectImage = async (formData) => {
+  const response = await apiClient.post('/detect/image', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  });
+  return response.data;
+};
+
+export const detectVideo = async (formData) => {
+  const response = await apiClient.post('/detect/video', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
