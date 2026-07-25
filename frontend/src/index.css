@@ -10,8 +10,13 @@
   --animate-fade-in-up: fade-in-up 0.5s ease-out;
 
   @keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   @keyframes fade-in-up {
@@ -19,6 +24,7 @@
       opacity: 0;
       transform: translateY(10px);
     }
+
     100% {
       opacity: 1;
       transform: translateY(0);
@@ -142,9 +148,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

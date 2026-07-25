@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Loader2, Mail, Lock, User, AlertCircle, ArrowRight } from 'lucide-react';
+import Ferrofluid from './react-bits/Ferrofluid.jsx';
 
 export default function Signin({ onToggle }) {
   const { signUp } = useAuth();
@@ -45,6 +46,26 @@ export default function Signin({ onToggle }) {
 
   return (
     <div className="w-full max-w-md bg-white rounded-2xl shadow-xl shadow-zinc-200/50 p-8 border border-zinc-100">
+      
+<div className="absolute inset-0 -z-10">
+  <Ferrofluid
+    colors={["#ffffff", "#ffffff", "#ffffff"]}
+    speed={0.5}
+    scale={1.6}
+    turbulence={1}
+    fluidity={0.1}
+    rimWidth={0.2}
+    sharpness={2.5}
+    shimmer={1.5}
+    glow={2}
+    flowDirection="down"
+    opacity={1}
+    mouseInteraction
+    mouseStrength={1}
+    mouseRadius={0.35}
+  />
+</div>
+       <div className="absolute inset-0 -z-10 bg-black/60" />
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-zinc-900 tracking-tight">Create an account</h2>
         <p className="text-sm text-zinc-500 mt-2">Join us to start detecting pedestrians</p>
